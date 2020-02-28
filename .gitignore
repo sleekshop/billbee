@@ -1,0 +1,10 @@
+.DS_Store
+._.DS_Store
+*.swp
+*.svn
+*.swo
+*.svn-base
+.TemporaryItems
+*._*
+.smbdelete*
+.ftpconfig

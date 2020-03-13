@@ -595,9 +595,6 @@ private $post_data=array();
  /*
  * This function sends a post - request
  */
- /*
- * This function sends a post - request
- */
  private function snd_request( $url, $postdata, $useragent = 'PHPPost/1.0' )
  {
 
@@ -650,6 +647,8 @@ private $post_data=array();
 
      /* seperate content and headers */
      list($headers, $content) = explode( "\r\n\r\n", $contents, 2 );
+     fclose($fp);
+     unset($fp);
      return $content;
  }
 

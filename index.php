@@ -15,10 +15,10 @@ if($action==1)
    $token=$_GET["token"];
    $sr=new SleekshopRequest();
    $res=$sr->instant_login($token);
-   $res=new SimpleXMLElement($res);
+   $res=json_decode($res);
    $status=(string)$res->status;
    //if($status!="SUCCESS")
-   echo "<h3>Welcome to the billbee app for sleekshop / v 1.0.1 beta</h3>";
+   echo "<h3>Welcome to the billbee app for sleekshop / v 1.1.1 beta</h3>";
    echo "<form method='post' action='index.php?id_action=3&save=1'>
    Api Endpoint<br>
    <input type='text' name='api_endpoint' placeholder='API Endpoint' value='".SERVER."'><br><br>
@@ -37,7 +37,7 @@ if($action==1)
 //When configuration is not complete
 if($action==2)
  {
-   echo "<h3>Welcome to the billbee app for sleekshop / v 1.0.1 beta</h3>";
+   echo "<h3>Welcome to the billbee app for sleekshop / v 1.1.1 beta</h3>";
    echo "<form method='post' action='index.php?id_action=3&save=1'>
    Api Endpoint<br>
    <input type='text' name='api_endpoint' placeholder='API Endpoint' value='".SERVER."'><br><br>

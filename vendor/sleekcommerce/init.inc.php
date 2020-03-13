@@ -7,6 +7,7 @@
  */
  define("ROOTPATH", "");
  define("PROJECTPATH", ROOTPATH . "./");
+ define("DEFAULT_LANGUAGE", "de_DE");
  /*
   * Now including some libaries needed
   */

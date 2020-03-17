@@ -6,10 +6,13 @@ $action=$_GET["Action"];
 $key=$_GET["Key"];
 if($key!=BillbeeCtl::GetKey(APPLICATION_KEY)) die("ACCESS_DENIED");
 $startdate=$_GET["StartDate"];
+if($startdate=="") die("NO STARTDATE");
 $constraint=array("creation_date"=>array(">",$startdate));
 $orders=OrderCtl::SearchOrders($constraint,0,0);
 $response=array();
 $count=count($orders);
+$log=date("Y-m-d H-i-s") . " - ".$startdate." - " . $count . "\n";
+file_put_contents('./logs/log_'.date("j.n.Y").'.log', $log, FILE_APPEND);
 $response["paging"]=array("page"=>1,"totalCount"=>$count,"totalPages"=>1);
 foreach($orders as $order)
 {

@@ -22,6 +22,6 @@
   include(PROJECTPATH . "vendor/sleekcommerce/payment.inc.php");
   include(PROJECTPATH . "vendor/sleekcommerce/mailing.inc.php");
   include(PROJECTPATH . "vendor/sleekcommerce/mysql.php");
-  include(PROJECTPATH . "vendor/sleekcommerce/reports.inc.php");
+
 
 ?>

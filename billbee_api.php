@@ -60,12 +60,12 @@ foreach($orders as $order)
     $element_piece["discount_percent"]=0;
     $element_piece["quantity"]=floatval($element["quantity"]);
     $element_piece["unit_price"]=floatval($element["price"]);
-    $element_piece["product_id"]=$element["id"];
+    $element_piece["product_id"]=$element["id_product"];
     $element_piece["name"]=$element["name"];
     $element_piece["sku"]=$element["element_number"];
     $element_piece["tax_rate"]=floatval(floatval($element["attributes"]["sys_tax"])*100);
     $element_piece["options"]=array();
-    $piece["order_products"][]=$element_piece;
+    if($element["type"]!="DELIVERY_COSTS") $piece["order_products"][]=$element_piece;
   }
   $response["orders"][]=$piece;
 }

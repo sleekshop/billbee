@@ -31,7 +31,7 @@ foreach($orders as $order)
     "postcode"=>$order["invoice_zip"],
     "city"=>$order["invoice_city"],
     "country"=>$order["invoice_country"],
-    "company"=>$order["invoice_company"],
+    "company"=>$order["invoice_companyname"],
     "state"=>$order["invoice_state"]
   );
   $piece["delivery_address"]=array(
@@ -43,7 +43,7 @@ foreach($orders as $order)
     "postcode"=>$order["delivery_zip"],
     "city"=>$order["delivery_city"],
     "country"=>$order["delivery_country"],
-    "company"=>$order["delivery_company"],
+    "company"=>$order["delivery_companyname"],
     "state"=>$order["delivery_state"]
   );
   $piece["order_date"]=$order["creation_date"];

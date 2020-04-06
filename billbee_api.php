@@ -64,7 +64,7 @@ foreach($orders as $order)
     $element_piece["name"]=$element["name"];
     $element_piece["sku"]=$element["element_number"];
     $element_piece["tax_rate"]=floatval(floatval($element["attributes"]["sys_tax"])*100);
-    $element_piece["options"]=array();
+    $element_piece["options"]=array(array("name"=>"short_description","value"=>$element["description"]));
     if($element["type"]!="DELIVERY_COSTS") $piece["order_products"][]=$element_piece;
   }
   $response["orders"][]=$piece;

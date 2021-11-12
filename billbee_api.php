@@ -7,7 +7,7 @@ $key=$_GET["Key"];
 if($key!=BillbeeCtl::GetKey(APPLICATION_KEY)) die("ACCESS_DENIED");
 $startdate=$_GET["StartDate"];
 if($startdate=="") die("{'error':'NO_STARTDATE'}");
-$constraint=array("creation_date"=>array(">",$startdate));
+$constraint=array("main.creation_date"=>array(">",$startdate));
 $orders=OrderCtl::SearchOrders($constraint,0,0);
 $response=array();
 $count=count($orders);

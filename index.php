@@ -18,7 +18,7 @@ if($action==1)
    $res=json_decode($res);
    $status=(string)$res->status;
    //if($status!="SUCCESS")
-   echo "<h3>Welcome to the billbee app for sleekshop / v 1.2.2 beta</h3>";
+   echo "<h3>Welcome to the billbee app for sleekshop / v 1.3.2 beta</h3>";
    echo "<form method='post' action='index.php?id_action=3&save=1'>
    Api Endpoint<br>
    <input type='text' name='api_endpoint' placeholder='API Endpoint' value='".SERVER."'><br><br>
@@ -37,7 +37,7 @@ if($action==1)
 //When configuration is not complete
 if($action==2)
  {
-   echo "<h3>Welcome to the billbee app for sleekshop / v 1.2.2 beta</h3>";
+   echo "<h3>Welcome to the billbee app for sleekshop / v 1.3.2 beta</h3>";
    echo "<form method='post' action='index.php?id_action=3&save=1'>
    Api Endpoint<br>
    <input type='text' name='api_endpoint' placeholder='API Endpoint' value='".SERVER."'><br><br>
@@ -63,7 +63,7 @@ if($action==2)
     $application_token=$_POST["application_token"];
     $application_key=$_POST["application_key"];
     ConfCtl::CreateConf($api_endpoint,$licence_username,$licence_password,$application_token,$application_key);
-    echo "<h3>Welcome to the billbee app for sleekshop / v 1.2.2 beta</h3>";
+    echo "<h3>Welcome to the billbee app for sleekshop / v 1.3.2 beta</h3>";
     echo "Updated the configuration, click <a href='index.php'>here</a>";
   }
 

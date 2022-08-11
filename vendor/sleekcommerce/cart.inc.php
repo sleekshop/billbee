@@ -23,6 +23,7 @@ class CartCtl
  		$piece["type"]=(string)$element->type;
  		$piece["id"]=(int)$element->id;
  		$piece["id_product"]=(int)$element->id_product;
+    $piece["element_number"]=$element->element_number;
  		$piece["quantity"]=(float)$element->quantity;
  		$piece["price"]=(float)$element->price;
  		$piece["sum_price"]=(float)$element->sum_price;

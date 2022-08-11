@@ -30,6 +30,30 @@ public static function GenerateKey()
    return($key);
  }
 
+ public static function GetBillBeePaymentMethod($name="")
+  {
+    if($name=="PayPal") return(3); //PayPal
+    if($name=="PrePayment") return(1); //Banküberweisung also prepayment
+    if($name=="Cash") return(4); //Cash
+    if($name=="EC-Cash") return(48); //EC-CASH
+    if($name=="Sofortueberweisung") return(19); //Sofortüberweisung
+    if($name=="PayMill" OR $name=="Stripe") return(31); //Kreditkarte (stripe oder paymill)
+    if($name=="Mollie") return(105); //Mollie
+    return(22);
+  }
+
+
+public static function GetBillBeeOrderStatus($order=array())
+ {
+   $orderstatus=1;
+   if($order["order_payment_state"]=="PAYMENT_RECEIVED") $orderstatus=3;
+   if($order["order_delivery_state"]=="CLOSED") $orderstatus=4;
+   if($order["order_state"]=="CANCELED") $orderstatus=8;
+   if($order["order_state"]=="CLOSED") $orderstatus=7;
+   return($orderstatus);
+ }
+
+
 }
 
 ?>

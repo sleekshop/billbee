@@ -148,8 +148,8 @@ public static function SetOrderDetails($session="",$args=array())
       $piece["order_state"]=(string)$order->order_state;
       $piece["order_number"]=(string)$order->order_number;
       $piece["creation_date"]=(string)$order->creation_date;
-      $piece["delivery_companyname"]=(string)$order->delivery_companyname;
-      $piece["delivery_department"]=(string)$order->delivery_department;
+      $piece["delivery_companyname"]=(string)$order->order_delivery_companyname;
+      $piece["delivery_department"]=(string)$order->order_delivery_department;
       $piece["delivery_salutation"]=(string)$order->order_delivery_salutation;
       $piece["delivery_firstname"]=(string)$order->order_delivery_firstname;
       $piece["delivery_lastname"]=(string)$order->order_delivery_lastname;
